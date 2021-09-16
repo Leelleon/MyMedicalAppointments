@@ -1,20 +1,22 @@
+package model;
+
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Doctor {
-    static int id;
-    private String name;
-    private String email;
+public class Doctor extends User{
     private String speciality;
     
-    public Doctor(String name, String speciality){
-        this.id = id++;
-        this.name = name;
+    Doctor(String name, String email){
+        super(name, email);
         this.speciality = speciality;
     }
     
-    public void ShowID(){
-        System.out.println(this.id);
+    public String getSpeciality() {
+        return speciality;
+    }
+    
+    public void setSpeciality(String speciality) {
+        this.speciality = speciality;
     }
     
     ArrayList<AvailableAppointment> Appointments = new ArrayList<>();
