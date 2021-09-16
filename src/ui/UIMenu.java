@@ -2,6 +2,14 @@ package ui;
 import java.util.Scanner;
 
 public class UIMenu {
+	
+	public static final String[] MONTHS = {
+			"Enero", "Febrero", "Marzo",
+			"Abril", "Mayo", "Junio",
+			"Julio", "Agosto", "Septiembre",
+			"Octubre", "Noviembre", "Diciembre"
+	};
+	
 	public static void showMenu(){
 		
 		System.out.println("Bienvenido a My Appointments");
@@ -47,7 +55,7 @@ public class UIMenu {
 			
 			switch (response) {
 				case 1:
-					System.out.println("Hacer una reserva");
+					showMonths();
 					break;
 				case 2:
 					System.out.println("Mis reservas");
@@ -60,5 +68,11 @@ public class UIMenu {
 					break;
 			}
 		}while (response != 0);
+	}
+	
+	public static void showMonths(){
+		for (int i = 1; i < 4; i++) {
+			System.out.println(i + ". " + MONTHS[i]);
+		}
 	}
 }
