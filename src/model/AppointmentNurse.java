@@ -1,7 +1,7 @@
 package model;
 import java.util.Date;
 
-public class AppointmentNurse {
+public class AppointmentNurse implements ISchedulable{
 	private int id;
 	private Patient patient;
 	private Nurse nurse;
@@ -46,5 +46,10 @@ public class AppointmentNurse {
 	
 	public void setTime(String time) {
 		this.time = time;
+	}
+	
+	@Override
+	public void schedule(Date date, String time) {
+	
 	}
 }
