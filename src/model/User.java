@@ -1,6 +1,6 @@
 package model;
 
-public class User {
+public abstract class User {
 	private int id;
 	private String name;
 	private String email;
@@ -52,4 +52,13 @@ public class User {
 		this.phoneNumber = phoneNumber;
 	}
 	
+	@Override
+	public String toString() {
+		return  "name='" + name + '\'' +
+				", email='" + email + '\'' +
+				", address='" + address + '\'' +
+				", phoneNumber='" + phoneNumber + '\'';
+	}
+	
+	public abstract void showDataUser();
 }

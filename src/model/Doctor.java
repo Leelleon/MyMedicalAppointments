@@ -6,7 +6,7 @@ import java.util.Date;
 public class Doctor extends User{
     private String speciality;
     
-    Doctor(String name, String email){
+    public Doctor(String name, String email){
         super(name, email);
         this.speciality = speciality;
     }
@@ -40,5 +40,19 @@ public class Doctor extends User{
             this.date = date;
             this.time = time;
         }
+    }
+    
+    @Override
+    public String toString() {
+        return super.toString() +
+                "speciality='" + speciality + '\'' +
+                ", Appointments=" + Appointments;
+    }
+    
+    @Override
+    public void showDataUser() {
+        System.out.println("Empleado");
+        System.out.println("Hospital: Cruz Roja");
+        System.out.println("Departamento: Oncologia");
     }
 }

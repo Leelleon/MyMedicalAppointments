@@ -12,4 +12,8 @@ public class Patient extends User{
 		super(name, email);
 	}
 	
+	@Override
+	public void showDataUser() {
+		System.out.println("Paciente");
+	}
 }
